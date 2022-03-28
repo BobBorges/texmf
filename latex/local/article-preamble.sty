@@ -1,0 +1,41 @@
+% all related to fonts and encoding
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\inputencoding{utf8}
+\usepackage{lmodern}
+
+
+% everything for the reference list
+\usepackage[backend=biber,%
+            doi=false,%
+            isbn=false,% 
+            url=false,%
+            maxcitenames=3,%
+            sorting=nyt,%
+            maxbibnames=99,%
+            url=false,%
+            eprint=false,%
+            style=chicago-authordate,%
+	    uniquename=false]{biblatex}	    
+\renewcommand*{\nameyeardelim}{\space}
+\renewcommand*{\postnotedelim}{\addcolon\space}
+\addbibresource{/home/bob/.bibmanager/bm_bibliography.bib}
+
+
+
+%%%%%%%%%%%%%%%
+%% FOOTNOTES %%
+%%%%%%%%%%%%%%%
+
+% allows easy footnotes formatting
+\usepackage[hang,flushmargin]{footmisc}
+
+% allows \affil in footnotes
+\usepackage{authblk}
+
+
+
+% allows hyperlinks
+% MUST BE LAST
+\usepackage[hidelinks]{hyperref}
+
