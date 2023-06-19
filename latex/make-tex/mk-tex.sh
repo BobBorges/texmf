@@ -22,6 +22,7 @@ echo '\documentclass[twoside]{article}
 \input{article-preamble.sty}
 \input{parts/packages.tex}
 \input{parts/meta-info.tex}
+
 \begin{document}
     \maketitle
     \frenchspacing
@@ -34,6 +35,7 @@ echo '\documentclass[twoside]{article}
 touch $DIR/parts/packages.tex
 echo '\usepackage{fancyhdr}
 \pagestyle{fancy}
+
 \fancyhf{}
 \fancyhead[RE]{'$DOCTITLE'}
 \fancyhead[LO]{'$DOCAUTHOR'}
@@ -51,7 +53,9 @@ echo '\title{'$DOCTITLE'}
 cd $DIR && pdflatex $TEX &
 sleep 2
 xreader $DIR/$TEX.pdf &
+
 nohup emacs $DIR &
+
 cd $DIR && exec bash
 
 }
