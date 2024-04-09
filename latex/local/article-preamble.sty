@@ -24,7 +24,9 @@
 }{
 	\IfFileExists{./bibliography.bib}{
 		\addbibresource{./bibliography.bib}
-	}{\typeout{No bibliography files found :|}}
+	}{
+        \addbibresource[location=remote]{https://raw.githubusercontent.com/BobBorges/refs-repo/master/bm_bibliography.bib}
+	}
 }
 
 \makeatletter
