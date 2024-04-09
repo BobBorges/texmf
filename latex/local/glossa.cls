@@ -177,7 +177,7 @@
 			bibstyle=biblatex-gl, %alphabetises and typesets the bibliography
 			citestyle=gl-authoryear-comp, %makes the references in the text
 			maxcitenames=3,
-			maxbibnames=99]{biblatex}
+			maxbibnames=99,uniquename=false]{biblatex}
 %\else
 %	\RequirePackage{natbib}
 %	\bibpunct[: ]{(}{)}{; }{a}{}{;~}
@@ -221,7 +221,7 @@
   %\RequirePackage{breakurl}
 \fi
 \RequirePackage{graphicx}
-\RequirePackage[hang,FIGBOTCAP,loose]{subfigure}
+%\RequirePackage[hang,FIGBOTCAP,loose]{subfigure}
 
 % additions/changes to the S&P required packages for Glossa are listed below
 

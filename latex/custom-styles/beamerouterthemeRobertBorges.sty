@@ -50,13 +50,13 @@
 }
 % The header shares the horizontal space with the frame title in normal mode
 % a relative width value between .5 and .8 should usually be the best
-\newcommand{\logoheader}{\includegraphics[width=.5\linewidth]{\headerpath}}
+\newcommand{\logoheader}{\includegraphics[height=.15\textheight]{\headerpath}}
 % For the title page, the logo is embedded in the total frame, meaning that \linewidth
 % here refers to the complete \paperwidth, small width values of < .4 are usually best.
-\newcommand{\logotitle}{\includegraphics[width=.2\linewidth]{\headerpath}}
+\newcommand{\logotitle}{\includegraphics[height=.35\textheight]{\headerpath}}
 % The footer will only use part of the space under the line. Usually almost the
 % full linewidth should be used
-\newcommand{\logofooter}{\includegraphics[width=.8\linewidth]{\institutepath}}
+\newcommand{\logofooter}{\includegraphics[height=.07\textheight]{\institutepath}}
 
 \newcommand{\pageword}{Page}
 \newcommand{\showpagenum}{%
@@ -69,7 +69,7 @@
 
 
 \defbeamertemplate*{frametitle}{largetitle}{
-    \logotitle
+  \logotitle
 }
 
 \newlength{\myleftmargin}
