@@ -19,13 +19,15 @@
 	    	uniquename=false]{biblatex}	    
 \renewcommand*{\nameyeardelim}{\space}
 \renewcommand*{\postnotedelim}{\addcolon\space}
-\IfFileExists{/home/bob/.bibmanager/bm_bibliography.bib}{
-	\addbibresource{/home/bob/.bibmanager/bm_bibliography.bib}
+\IfFileExists{parts/bibliography.bib}{
+	\addbibresource{parts/bibliography.bib}
 }{
-	\IfFileExists{./bibliography.bib}{
-		\addbibresource{./bibliography.bib}
+	\IfFileExists{/home/bob/.bibmanager/bm_bibliography.bib}{
+		\addbibresource{/home/bob/.bibmanager/bm_bibliography.bib}
 	}{
-        \addbibresource[location=remote]{https://raw.githubusercontent.com/BobBorges/refs-repo/master/bm_bibliography.bib}
+        \typeout{No bibresource found "|}
+        \typeout{try `wget --output-document=parts/bibliography.bib - https://raw.githubusercontent.com/BobBorges/refs-repo/master/bm_bibliography.bib`}
+        %\addbibresource[location=remote]{https://raw.githubusercontent.com/BobBorges/refs-repo/master/bm_bibliography.bib}
 	}
 }
 
